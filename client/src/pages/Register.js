@@ -71,20 +71,20 @@ const Register = () => {
           <TextField
             placeholder="email"
             value={inputs.email}
+            onChange={handleChange}
             name="email"
             margin="normal"
             type={"email"}
             required
-            onChange={handleChange}
           />
           <TextField
             placeholder="password"
             value={inputs.password}
+            onChange={handleChange}
             name="password"
             margin="normal"
             type={"password"}
             required
-            onChange={handleChange}
           />
 
           <Button

@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../redux/store";
+import { toast } from 'react-toastify';
 const Header = () => {
   // global state
   const isLogin = useSelector((state) => state.isLogin);
@@ -24,7 +25,7 @@ const Header = () => {
   const handleLogout = () => {
     try {
       dispatch(authActions.logout());
-      alert("Logout Successfully");
+      toast.success("Logout Successfully");
       navigate("/login");
     } catch (error) {
       console.log(error);
